@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1033083225253",
+    "project_id": "shopping-list-experiment",
+    "storage_bucket": "shopping-list-experiment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033083225253:android:30c2c9e7afa5c4ed8c794c",
+        "android_client_info": {
+          "package_name": "dev.groovinchip.shopping_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033083225253-ng71q5oltcefgevbn3148i3qglff2jfe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-HeuH3sWlr6kwted0B9ZRwDjnccdRMPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033083225253-ng71q5oltcefgevbn3148i3qglff2jfe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1033083225253-7e9tc1a7khdebcsidpcs5uh9t6h4vbu4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.groovinchip.shoppingList"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
