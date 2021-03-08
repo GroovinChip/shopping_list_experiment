@@ -8,26 +8,26 @@ import 'package:shopping_list/widgets/reorderable_firestore_list.dart';
 class StoreScreen extends StatefulWidget {
   const StoreScreen({
     Key? key,
-    required this.storeName,
+    required this.store,
   }) : super(key: key);
 
-  final String storeName;
+  final Store store;
 
   @override
   _StoreScreenState createState() => _StoreScreenState();
 }
 
 class _StoreScreenState extends State<StoreScreen> {
-  var items = [];
+  Store get store => widget.store;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.storeName),
+        title: Text(store.name),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),
           child: AddItemToolbar(
-            storeName: widget.storeName,
+            store: store,
           ),
         ),
         actions: [
@@ -48,7 +48,7 @@ class _StoreScreenState extends State<StoreScreen> {
         ],
       ),
       body: ReorderableFirebaseList(
-        collection: stores.doc(widget.storeName).collection('items'),
+        collection: store.items,
         indexKey: 'pos',
         itemBuilder: (context, index, doc) {
           var checked = false;
@@ -66,42 +66,6 @@ class _StoreScreenState extends State<StoreScreen> {
           ),
         ),
       ),
-      /*body: StreamBuilder<QuerySnapshot>(
-        stream: stores.doc(widget.storeName).collection('items').snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text('${snapshot.error}'),
-            );
-          }
-
-          if (!snapshot.hasData) {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          } else {
-            return ListView.builder(
-              itemCount: snapshot.data.docs.length,
-              itemBuilder: (context, index) {
-                final doc = snapshot.data.docs[index];
-                var checked = false;
-                return CheckboxListTile(
-                  title: Text(doc.id),
-                  value: checked,
-                  onChanged: (value) => doc.reference.delete(),
-                );
-                */ /*return ListTile(
-                  title: Text(doc.id),
-                  trailing: IconButton(
-                    icon: Icon(Icons.check),
-                    onPressed: () => doc.reference.delete(),
-                  ),
-                );*/ /*
-              },
-            );
-          }
-        },
-      ),*/
     );
   }
 }

@@ -31,6 +31,9 @@ class _NewStoreDialogState extends State<NewStoreDialog> {
               stream: stores.snapshots(),
               builder: (context, snapshot) {
                 return TextButton(
+                  style: TextButton.styleFrom(
+                    primary: Theme.of(context).primaryColor,
+                  ),
                   child: Text('ADD'),
                   onPressed: () {
                     if (storeController.text.isNotEmpty && snapshot.hasData) {
@@ -42,7 +45,7 @@ class _NewStoreDialogState extends State<NewStoreDialog> {
                     }
                   },
                 );
-              }
+              },
             ),
           ],
         ),

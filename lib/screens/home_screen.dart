@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,
-        title: Text('Stores'),
+        title: Text('My Stores'),
         actions: [
           IconButton(
             tooltip: 'Add Store',
@@ -31,6 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
         collection: stores,
         indexKey: 'pos',
         itemBuilder: (context, index, doc) {
+          final store = Store(
+            name: doc.id,
+            pos: index,
+          );
           return Container(
             key: Key(doc.id),
             decoration: BoxDecoration(
@@ -46,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => StoreScreen(
-                    storeName: doc.id,
+                    store: store,
                   ),
                 ),
               ),
