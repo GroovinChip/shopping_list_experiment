@@ -23,6 +23,7 @@ class _StoreScreenState extends State<StoreScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.dark,
         title: Text(store.name),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),

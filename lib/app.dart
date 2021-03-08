@@ -18,7 +18,7 @@ class ShoppingApp extends StatelessWidget {
         accentColor: Colors.indigoAccent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       home: HomeScreen(),
     );
   }
