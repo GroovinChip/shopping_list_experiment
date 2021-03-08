@@ -35,23 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
             name: doc.id,
             pos: index,
           );
-          return Container(
+          return ListTile(
             key: Key(doc.id),
-            decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Colors.grey.shade300,
-                ),
-              ),
-            ),
-            child: ListTile(
-              title: Text(doc.id),
-              trailing: Icon(Icons.chevron_right),
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => StoreScreen(
-                    store: store,
-                  ),
+            title: Text(doc.id),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => StoreScreen(
+                  store: store,
                 ),
               ),
             ),
