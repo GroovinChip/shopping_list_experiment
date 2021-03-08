@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 extension BuildContextX on BuildContext {
   Future<void> showSnackBar(
-      {String message, String actionText = 'Okay', VoidCallback onPressed}) {
-    final showAction = actionText != null && actionText.isNotEmpty;
+      {String? message, String actionText = 'Okay', VoidCallback? onPressed}) {
+    final showAction = actionText.isNotEmpty;
 
     final controller = ScaffoldMessenger.of(this).showSnackBar(
       SnackBar(
@@ -11,7 +11,7 @@ extension BuildContextX on BuildContext {
         behavior: SnackBarBehavior.floating,
         action: showAction
             ? SnackBarAction(
-                label: actionText ?? 'Okay', onPressed: onPressed ?? () {})
+                label: actionText, onPressed: onPressed ?? () {})
             : null,
       ),
     );

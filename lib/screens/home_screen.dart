@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_list/firebase/firebase.dart';
 import 'package:shopping_list/screens/store_screen.dart';
-import 'package:shopping_list/widgets/add_item_toolbar.dart';
 import 'package:shopping_list/widgets/new_store_dialog.dart';
 import 'package:shopping_list/widgets/reorderable_firestore_list.dart';
-import 'package:shopping_list/extensions.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,12 +10,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var _selectedList;
-  final newItemController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
-    //print(context.isDarkTheme);
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,

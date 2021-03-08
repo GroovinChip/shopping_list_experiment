@@ -1,8 +1,8 @@
 class Store {
   Store({
-    this.id,
-    this.name,
-    this.pos,
+    required this.id,
+    required this.name,
+    required this.pos,
   });
 
   final String id;

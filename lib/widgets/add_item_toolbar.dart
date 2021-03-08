@@ -3,8 +3,8 @@ import 'package:shopping_list/firebase/firebase.dart';
 
 class AddItemToolbar extends StatefulWidget {
   const AddItemToolbar({
-    Key key,
-    this.storeName,
+    Key? key,
+    required this.storeName,
   }) : super(key: key);
 
   final String storeName;
@@ -27,10 +27,10 @@ class _AddItemToolbarState extends State<AddItemToolbar> {
               textInputAction: TextInputAction.done,
               controller: newItemController,
               onSubmitted: (value) {
-                if (value != null && value.isNotEmpty) {
+                if (value.isNotEmpty) {
                   stores
                       .store(widget.storeName)
-                      .addItem(value, snapshot.data.size + 1);
+                      .addItem(value, snapshot.data!.size + 1);
                   setState(() => newItemController.clear());
                 }
               },

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:shopping_list/firebase/firebase.dart';
 
 class NewStoreDialog extends StatefulWidget {
@@ -26,8 +25,7 @@ class _NewStoreDialogState extends State<NewStoreDialog> {
             ),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+        ButtonBar(
           children: [
             StreamBuilder<QuerySnapshot>(
               stream: stores.snapshots(),
@@ -37,7 +35,7 @@ class _NewStoreDialogState extends State<NewStoreDialog> {
                   onPressed: () {
                     if (storeController.text.isNotEmpty && snapshot.hasData) {
                       stores.doc(storeController.text).set({
-                        'pos': snapshot.data.size + 1,
+                        'pos': snapshot.data!.size + 1,
                       });
 
                       Navigator.of(context).pop();

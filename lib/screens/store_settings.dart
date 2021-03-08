@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class StoreSettings extends StatefulWidget {
   const StoreSettings({
-    Key key,
-    @required this.storeName,
+    Key? key,
+    required this.storeName,
   }) : super(key: key);
 
   final String storeName;
@@ -13,7 +13,7 @@ class StoreSettings extends StatefulWidget {
 }
 
 class _StoreSettingsState extends State<StoreSettings> {
-  TextEditingController storeController;
+  late TextEditingController storeController;
 
   @override
   void initState() {

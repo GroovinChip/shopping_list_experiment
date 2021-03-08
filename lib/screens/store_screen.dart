@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_list/firebase/firebase.dart';
 import 'package:shopping_list/screens/store_settings.dart';
@@ -8,8 +7,8 @@ import 'package:shopping_list/widgets/reorderable_firestore_list.dart';
 
 class StoreScreen extends StatefulWidget {
   const StoreScreen({
-    Key key,
-    @required this.storeName,
+    Key? key,
+    required this.storeName,
   }) : super(key: key);
 
   final String storeName;
