@@ -15,6 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,
+        //centerTitle: true,
         title: Text('My Stores'),
         actions: [
           IconButton(

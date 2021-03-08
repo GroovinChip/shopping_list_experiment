@@ -24,6 +24,7 @@ class _StoreScreenState extends State<StoreScreen> {
     return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,
+        //centerTitle: true,
         title: Text(store.name),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),

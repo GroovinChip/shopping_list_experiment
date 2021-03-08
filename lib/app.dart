@@ -10,12 +10,18 @@ class ShoppingApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: Colors.indigo,
         accentColor: Colors.indigoAccent,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.indigo,
         accentColor: Colors.indigoAccent,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       themeMode: ThemeMode.system,
