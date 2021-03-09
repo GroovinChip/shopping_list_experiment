@@ -159,6 +159,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  implicitly_animated_reorderable_list:
+    dependency: "direct main"
+    description:
+      name: implicitly_animated_reorderable_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.2"
   integration_test:
     dependency: "direct dev"
     description: flutter
@@ -171,6 +178,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  keyboard_avoider:
+    dependency: "direct main"
+    description:
+      name: keyboard_avoider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   matcher:
     dependency: transitive
     description:
