@@ -51,5 +51,4 @@ jobs:
       env:
         GITHUB_TOKEN: 8c5af7fe8a99fd6f17efbf7b8dc0c860bd4981b6
       with:
-        name: dev.groovinchip.shopping_list
         args: 'build/app/outputs/flutter-apk/app-arm64-v8a-release.apk'
