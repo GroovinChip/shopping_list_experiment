@@ -49,7 +49,7 @@ jobs:
         path: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
     - uses: skx/github-action-publish-binaries@master
       env:
-        GITHUB_TOKEN: ${{ secrets.8c5af7fe8a99fd6f17efbf7b8dc0c860bd4981b6 }}
+        GITHUB_TOKEN: 8c5af7fe8a99fd6f17efbf7b8dc0c860bd4981b6
       with:
         name: dev.groovinchip.shopping_list
         args: 'build/app/outputs/flutter-apk/app-arm64-v8a-release.apk'
