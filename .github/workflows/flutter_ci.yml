@@ -52,3 +52,5 @@ jobs:
       with:
         artifacts: "build/app/outputs/flutter-apk/*.apk"
         token: 8c5af7fe8a99fd6f17efbf7b8dc0c860bd4981b6
+        commit: master
+        tag: v0.0.1.${{ github.run_number }}
